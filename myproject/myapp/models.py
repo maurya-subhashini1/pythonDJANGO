@@ -1,15 +1,18 @@
-from django.db import models
+# from django.db import models
+from djongo import models
 
-# Create your models here.
 
 
 class Article(models.Model):
+    objectId=models.ObjectIdField()
     title=models.CharField(max_length=250)
     name=models.CharField(max_length=250)
+    comment=models.CharField(max_length=500)
 
 
-    def __str__(self):
-        return self.title
+    # def __str__(self):
+    #     return self.title
 
 
 
+ 
